@@ -1,4 +1,4 @@
-FROM node:20-alpine as builder
+FROM node:20-alpine
 
 WORKDIR /app
 COPY package*.json ./
@@ -7,7 +7,7 @@ RUN npm ci
 
 COPY . .
 
-RUN next build
+RUN npm run build
 RUN next start
 
 EXPOSE 83
