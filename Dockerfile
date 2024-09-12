@@ -8,6 +8,8 @@ RUN npm ci
 COPY . .
 
 RUN npm run build
-RUN npm start
 
 EXPOSE 83
+
+CMD ["npm", "start"]
+
