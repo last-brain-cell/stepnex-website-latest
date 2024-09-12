@@ -7,7 +7,7 @@ EXPOSE 83
 FROM base as builder
 WORKDIR /app
 COPY . .
-RUN npm run build
+RUN next build
 
 
 FROM base as production
@@ -26,4 +26,4 @@ COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/package.json ./package.json
 COPY --from=builder /app/public ./public
 
-CMD npm start
+CMD next start
