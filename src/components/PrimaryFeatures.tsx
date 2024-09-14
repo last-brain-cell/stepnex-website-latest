@@ -2,18 +2,19 @@
 
 import {useEffect, useState} from 'react'
 import Image from 'next/image'
-import {Tab, TabGroup, TabList, TabPanel, TabPanels} from '@headlessui/react'
+import {Tab, TabGroup, TabPanel, TabPanels} from '@headlessui/react'
 import clsx from 'clsx'
+import Autoplay from "embla-carousel-autoplay"
+
 
 import {Container} from '@/components/Container'
 import backgroundImage from '@/images/background-features.jpg'
 import LandingPage from '@/images/screenshots/ProjectManagementScreenshot.png'
-import screenshotReporting from '@/images/screenshots/reporting.png'
-import screenshotVatReturns from '@/images/screenshots/vat-returns.png'
 import SLCM from '@/images/screenshots/SLCM.png'
 import Logistics from '@/images/screenshots/Logistics.png'
 import {ArrowUpRightIcon} from "@heroicons/react/24/outline";
 import Link from "next/link";
+import {Carousel, CarouselContent, CarouselItem} from "@/components/ui/carousel";
 
 const features = [
   {
@@ -67,18 +68,8 @@ export function PrimaryFeatures() {
   const [selectedIndex, setSelectedIndex] = useState(0)
   const [userHasInteracted, setUserHasInteracted] = useState(false)
 
-  // Automatically cycle through the features every 3 seconds
-  useEffect(() => {
-    if (userHasInteracted) {
-      return // Stop automatic switching if the user has interacted
-    }
+  console.dir(userHasInteracted)
 
-    const timer = setTimeout(() => {
-      setSelectedIndex((prevIndex) => (prevIndex + 1) % features.length) // Cycle through the tabs
-    }, 3000) // Change the tab every 3 seconds
-
-    return () => clearTimeout(timer) // Cleanup timer on unmount
-  }, [selectedIndex, userHasInteracted]) // Re-run effect when selectedIndex or userHasInteracted changes
 
   // Handle manual tab change and stop auto-switching
   const handleTabChange = (index: number) => {
@@ -131,10 +122,10 @@ export function PrimaryFeatures() {
               selectedIndex={selectedIndex} // Set selected index
               onChange={handleTabChange}   // Handle manual tab change
           >
-            <div className="-mx-4 flex overflow-x-auto pb-4 sm:mx-0 sm:overflow-visible sm:pb-0 lg:col-span-5">
-              <TabList className="relative z-10 flex gap-x-4 whitespace-nowrap px-4 sm:mx-auto sm:px-0 lg:mx-0 lg:block lg:gap-x-0 lg:gap-y-1 lg:whitespace-normal">
+            <Carousel plugins={[Autoplay({delay: 2000,}),]}  opts={{align: "start", loop: true}} orientation="vertical" className="-mx-4 flex overflow-x-auto pb-4 sm:mx-0 sm:overflow-visible sm:pb-0 lg:col-span-5">
+              <CarouselContent className="relative z-10 flex gap-x-4 whitespace-nowrap px-4 sm:mx-auto sm:px-0 lg:mx-0 lg:block lg:gap-x-0 lg:gap-y-1 lg:whitespace-normal">
                 {features.map((feature, featureIndex) => (
-                    <div
+                    <CarouselItem
                         key={feature.title}
                         className={clsx(
                             'group relative rounded-full px-4 py-1 lg:rounded-l-xl lg:rounded-r-none lg:p-4',
@@ -179,10 +170,10 @@ export function PrimaryFeatures() {
                           <ArrowUpRightIcon className={'h-3 w-auto stroke-2'} />
                         </Link>
                       </div>
-                    </div>
+                    </CarouselItem>
                 ))}
-              </TabList>
-            </div>
+              </CarouselContent>
+            </Carousel>
             <TabPanels className="lg:col-span-7">
               {features.map((feature, index) => (
                   <TabPanel

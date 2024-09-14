@@ -9,6 +9,21 @@ export const metadata: Metadata = {
     template: '%s - StepNex',
     default: 'StepNex Technologies',
   },
+  openGraph: {
+    title: "StepNex Technologies",
+    description: "Step into the Future with StepNex Your Trusted Tech Partner.",
+    url: 'https://www.stepnex.tech',
+    siteName: "StenNex Technologies",
+    type: 'website',
+    images: [
+      {
+        url: '/StepNex_Card.jpg',
+        width: 1000,
+        height: 4,
+        alt: 'Preview image for StepNex Website',
+      }
+    ]
+  },
   // description:
   //   'Most bookkeeping software is accurate, but hard to use. We make the opposite trade-off, and hope you don’t get audited.',
 }
