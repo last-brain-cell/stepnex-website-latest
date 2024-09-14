@@ -1,13 +1,12 @@
 "use client"
 
-import { type Metadata } from 'next'
 import Link from 'next/link'
 
-import { Button } from '@/components/Button'
-import { TextField } from '@/components/Fields'
-import { Logo } from '@/components/Logo'
-import { SlimLayout } from '@/components/SlimLayout'
-import { useState } from "react";
+import {Button} from '@/components/Button'
+import {TextField} from '@/components/Fields'
+import {Logo} from '@/components/Logo'
+import {SlimLayout} from '@/components/SlimLayout'
+import {useState} from "react";
 
 export default function Login() {
     // Fixing the type for error state (string | null)

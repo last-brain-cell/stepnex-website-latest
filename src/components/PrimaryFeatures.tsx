@@ -1,11 +1,11 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import {useEffect, useState} from 'react'
 import Image from 'next/image'
-import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react'
+import {Tab, TabGroup, TabList, TabPanel, TabPanels} from '@headlessui/react'
 import clsx from 'clsx'
 
-import { Container } from '@/components/Container'
+import {Container} from '@/components/Container'
 import backgroundImage from '@/images/background-features.jpg'
 import screenshotExpenses from '@/images/screenshots/expenses.png'
 import LandingPage from '@/images/screenshots/ProjectManagementScreenshot.png'
@@ -72,7 +72,7 @@ export function PrimaryFeatures() {
   }, [selectedIndex, userHasInteracted]) // Re-run effect when selectedIndex or userHasInteracted changes
 
   // Handle manual tab change and stop auto-switching
-  const handleTabChange = (index) => {
+  const handleTabChange = (index: number) => {
     setSelectedIndex(index)
     setUserHasInteracted(true) // Mark that the user has manually interacted
   }

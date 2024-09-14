@@ -1,4 +1,4 @@
-import { useId } from 'react'
+import {useId} from 'react'
 import clsx from 'clsx'
 
 const formClasses =
@@ -21,7 +21,7 @@ export function TextField({
   className,
   ...props
 }: Omit<React.ComponentPropsWithoutRef<'input'>, 'id'> & { label: string }) {
-  let id = useId()
+  const id = useId()
 
   return (
     <div className={className}>
