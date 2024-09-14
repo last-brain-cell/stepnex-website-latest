@@ -7,10 +7,11 @@ import clsx from 'clsx'
 
 import {Container} from '@/components/Container'
 import backgroundImage from '@/images/background-features.jpg'
-import screenshotExpenses from '@/images/screenshots/expenses.png'
 import LandingPage from '@/images/screenshots/ProjectManagementScreenshot.png'
 import screenshotReporting from '@/images/screenshots/reporting.png'
 import screenshotVatReturns from '@/images/screenshots/vat-returns.png'
+import SLCM from '@/images/screenshots/SLCM.png'
+import Logistics from '@/images/screenshots/Logistics.png'
 import {ArrowUpRightIcon} from "@heroicons/react/24/outline";
 import Link from "next/link";
 
@@ -18,8 +19,7 @@ const features = [
   {
     index: 0,
     title: 'Project Management System',
-    description:
-        "Comprehensive ERP solutions designed to meet the unique needs of your business, streamlining operations and improving efficiency.",
+    description: "Comprehensive ERP solutions designed to meet the unique needs of your business, streamlining operations and improving efficiency.",
     image: LandingPage,
     buttonText: "View",
     url: "/wip"
@@ -29,7 +29,16 @@ const features = [
     title: 'SLCM & LMS',
     description:
         "Robust Student Lifecycle Management and Learning Management Systems to optimize educational processes, ensuring seamless administration and learning experiences.",
-    image: screenshotExpenses,
+    image: SLCM,
+    buttonText: "View",
+    url: "/wip"
+  },
+  {
+    index: 1,
+    title: 'Logistics Management System',
+    description:
+        "Robust Student Lifecycle Management and Learning Management Systems to optimize educational processes, ensuring seamless administration and learning experiences.",
+    image: Logistics,
     buttonText: "View",
     url: "/wip"
   },
@@ -38,7 +47,7 @@ const features = [
     title: 'High Performance AI Solutions',
     description:
         'Advanced AI solutions built to handle complex tasks with speed and precision, empowering your business to achieve more.',
-    image: screenshotReporting,
+    image: Logistics,
     buttonText: "Contact us",
     url: "#get-started-today"
   },
@@ -47,7 +56,7 @@ const features = [
     title: 'Custom Software Development',
     description:
         "Tailored software development services that align with your specific business requirements, delivering scalable and efficient solutions.",
-    image: screenshotVatReturns,
+    image: Logistics,
     buttonText: "Contact us",
     url: "#get-started-today"
   },
