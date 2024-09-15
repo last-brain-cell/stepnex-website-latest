@@ -9,9 +9,7 @@ import {Container} from '@/components/Container'
 import screenshotContacts from '@/images/screenshots/contacts.png'
 import screenshotInventory from '@/images/screenshots/inventory.png'
 import screenshotProfitLoss from '@/images/screenshots/profit-loss.png'
-import {FlagIcon} from "@heroicons/react/24/solid";
 import {CloudIcon} from "@heroicons/react/24/outline";
-// import {Cloud, CloudCogIcon, CloudIcon, Cloudy} from "lucide-react";
 
 interface Feature {
   name: React.ReactNode

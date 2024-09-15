@@ -1,6 +1,7 @@
 import {Button} from '@/components/Button'
 import {Container} from '@/components/Container'
 import Link from "next/link";
+import Image from "next/image"
 
 export function Hero() {
   return (
@@ -69,29 +70,27 @@ export function Hero() {
                   }
 
               ].map((company) => {
-                  return (
-                      company.site ? (
-                          <Link key={company.name} href={company.site} className={'flex items-center justify-center'}>
-                              <img
-                                  className={'h-20 w-auto'}
-                                  src={company.src}
-                                  alt={company.name}
-                                  height={100}
-                                  width={100}
-                              />
-                          </Link>
-                      ) : (
-                          <div key={company.name} className={'flex items-center justify-center'}>
-                              <img
-                                  className={'h-20 w-auto'}
-                                  src={company.src}
-                                  alt={company.name}
-                                  height={100}
-                                  width={100}
-                              />
-                          </div>
-                      )
+                return (
+                  company.site ? (
+                    <Link key={company.name} href={company.site} className="flex items-center justify-center">
+                      <Image
+                        src={company.src}
+                        alt={company.name}
+                        height={160}
+                        width={160}
+                      />
+                    </Link>
+                  ) : (
+                    <div key={company.name} className="flex items-center justify-center">
+                      <Image
+                        src={company.src}
+                        alt={company.name}
+                        height={160}
+                        width={160}
+                      />
+                    </div>
                   )
+                );
               })
               }
           </div>

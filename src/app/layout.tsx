@@ -5,6 +5,7 @@ import clsx from 'clsx'
 import '@/styles/tailwind.css'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.stepnex.tech'),
   title: {
     template: '%s - StepNex',
     default: 'StepNex Technologies',
