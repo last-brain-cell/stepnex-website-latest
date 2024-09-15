@@ -6,7 +6,7 @@ import avatarImage5 from '@/images/avatars/avatar-5.png'
 const testimonials = [
     {
       content:
-        'TaxPal is so easy to use I can’t help but wonder if it’s really doing the things the government expects me to do.',
+        'StepNex developed a logistics management system tailored to our RMC plant, streamlining our entire supply chain. It improved efficiency and reduced delays across the board.',
       author: {
         name: 'Jitin Gupta',
         role: 'Managing Director at NDCON Constructions ',
@@ -15,19 +15,28 @@ const testimonials = [
     },
     {
       content:
-        'I’m trying to get a hold of someone in support, I’m in a lot of trouble right now and they are saying it has something to do with my books. Please get back to me right away.',
+        'Their custom solution for our water systems products and services business has streamlined our work processes, helping us manage operations seamlessly and deliver better results.',
       author: {
         name: 'Anand Chiplunkar',
-        role: 'Director at Aqua Products & Services Pvt. Ltd',
+        role: 'Director at Aqua Products & Services Pvt. Ltd.',
         image: avatarImage4,
       },
     },
     {
       content:
-        'The best part about TaxPal is every time I pay my employees, my bank balance doesn’t go down like it used to. Looking forward to spending this extra cash when I figure out why my card is being declined.',
+        'StepNex delivered a robust ERP system that integrated every aspect of our business. It has simplified operations and given us full control over our resources.',
       author: {
         name: 'Madhu Goel',
         role: 'Partner at Shivoha Infrastructure LLP',
+        image: avatarImage5,
+      },
+    },
+    {
+      content:
+        'The project management system built by StepNex has revolutionized how we handle operations, projects, and clients. Our teams are more coordinated, and projects move faster.',
+      author: {
+        name: 'XYZ',
+        role: 'CEO at Udyam Ventures Pvt. Ltd.',
         image: avatarImage5,
       },
     },
