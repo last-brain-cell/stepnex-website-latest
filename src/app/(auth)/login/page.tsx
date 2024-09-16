@@ -18,7 +18,7 @@ export default function Login() {
         setSubmitting(true)
         setError(null)
         setTimeout(() => {
-            setError("Invalid credentials")
+            setError("Invalid email or password")
             setSubmitting(false)
         }, 1500)
     }

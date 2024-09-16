@@ -103,15 +103,15 @@ export function PrimaryFeatures() {
   }, [])
 
   // Scroll the selected tab into view
-  useEffect(() => {
-    if (tabRefs.current[selectedIndex]) {
-      tabRefs.current[selectedIndex]?.scrollIntoView({
-        behavior: 'smooth',
-        block: 'center', // Center the tab vertically
-        inline: 'center' // Center the tab horizontally
-      });
-    }
-  }, [selectedIndex]);
+  // useEffect(() => {
+  //   if (tabRefs.current[selectedIndex]) {
+  //     tabRefs.current[selectedIndex]?.scrollIntoView({
+  //       behavior: 'smooth',
+  //       block: 'center', // Center the tab vertically
+  //       inline: 'center' // Center the tab horizontally
+  //     });
+  //   }
+  // }, [selectedIndex]);
 
   return (
     <section
