@@ -4,10 +4,8 @@ import Link from 'next/link'
 import {Popover, PopoverBackdrop, PopoverButton, PopoverPanel,} from '@headlessui/react'
 import clsx from 'clsx'
 
-import {Button} from '@/components/Button'
 import {Container} from '@/components/Container'
 import {Logo} from '@/components/Logo'
-import {NavLink} from '@/components/NavLink'
 
 function MobileNavLink({
                            href,
@@ -92,7 +90,11 @@ export function HeaderForCareers() {
                         {/*    <NavLink href="#pricing">Careers</NavLink>*/}
                         {/*</div>*/}
                         <div className={'flex w-full justify-end'}>
-                            <button className={'bg-black px-6 font-normal py-2 rounded-full text-white '}>Apply now</button>
+                          <Link href={"https://forms.gle/3Lpxp26VP7VPQKVA7"}>
+                            <button className={'bg-black px-6 font-normal py-2 rounded-full text-white hover:bg-zinc-800'}>
+                              Apply now
+                            </button>
+                          </Link>
                         </div>
 
                     </div>

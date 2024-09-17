@@ -10,9 +10,11 @@ export function Footer() {
           <Logo className="mx-auto h-10 w-auto" />
           <nav className="mt-10 text-sm" aria-label="quick links">
             <div className="-my-1 flex justify-center gap-x-6">
-              <NavLink href="#features">Services</NavLink>
-              <NavLink href="#testimonials">Testimonials</NavLink>
-              <NavLink href="#testimonials">Careers</NavLink>
+              <NavLink href="#features"><b>Services</b></NavLink>
+              <NavLink href="#secondary-features"><b>Expertise</b></NavLink>
+              <NavLink href="#get-started-today"><b>Contact</b></NavLink>
+              <NavLink href="#testimonials"><b>Testimonials</b></NavLink>
+              <NavLink href="/careers"><b>Careers</b></NavLink>
             </div>
           </nav>
         </div>
