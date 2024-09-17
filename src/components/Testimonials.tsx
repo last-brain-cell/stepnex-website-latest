@@ -35,7 +35,7 @@ const testimonials = [
       content:
         'The project management system built by StepNex has revolutionized how we handle operations, projects, and clients. Our teams are more coordinated, and projects move faster.',
       author: {
-        name: 'XYZ',
+        name: 'Bishwajit Singh',
         role: 'CEO at Udyam Ventures Pvt. Ltd.',
         image: avatarImage5,
       },
