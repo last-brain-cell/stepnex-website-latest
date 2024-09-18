@@ -26,7 +26,7 @@ export function HeroSectionForCareers() {
                 Most tech companies build software. We build partnerships. At StepNex, innovation drives us, and integrity guides us, as we help you navigate the digital world with ease.
             </p>
             <div className="mt-10 flex justify-center gap-x-6 w-full">
-                <Button href={'#roles'} className={"w-1/4 text-[#52A1F0] hover:bg-zinc-800 bg-white ring-black ring-2 text-xl font-normal h-12"}>Explore roles</Button>
+                <button href={'#roles'} className={"w-1/4 text-[#2563EB] hover:bg-gray-1g00 rounded-full  bg-white ring-black ring-2 text-xl font-medium h-12"}>Explore roles</button>
                 <Button href={'https://forms.gle/3Lpxp26VP7VPQKVA7'} className={"w-1/4 text-xl font-medium h-12"}>Apply</Button>
             </div>
         </Container>
