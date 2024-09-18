@@ -1,5 +1,6 @@
 import {Button} from '@/components/Button'
 import {Container} from '@/components/Container'
+import Link from "next/link";
 
 export function HeroSectionForCareers() {
     return (
@@ -25,9 +26,9 @@ export function HeroSectionForCareers() {
             <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
                 Most tech companies build software. We build partnerships. At StepNex, innovation drives us, and integrity guides us, as we help you navigate the digital world with ease.
             </p>
-            <div className="mt-10 flex justify-center gap-x-6 w-full">
-                <button href={'#roles'} className={"w-1/4 text-[#2563EB] hover:bg-gray-1g00 rounded-full  bg-white ring-black ring-2 text-xl font-medium h-12"}>Explore roles</button>
-                <Button href={'https://forms.gle/3Lpxp26VP7VPQKVA7'} className={"w-1/4 text-xl font-medium h-12"}>Apply</Button>
+            <div className="mt-10 flex sm:flex-row flex-col items-center gap-8 justify-center gap-x-6 w-full sm:px-0 px-8">
+                <Link href={'#roles'} className={" text-[#2563EB] text-nowrap w-full hover:bg-gray-100 sm:w-1/4 h-11 rounded-full ring-stepnex-blue ring-2 text-xl flex items-center justify-center font-medium"}>Explore roles</Link>
+                <Button href={'https://forms.gle/3Lpxp26VP7VPQKVA7'} className={"w-full text-xl sm:w-1/4 font-medium h-12"}>Apply</Button>
             </div>
         </Container>
     )

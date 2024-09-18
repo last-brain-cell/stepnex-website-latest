@@ -11,9 +11,9 @@ export interface Role {
 export default function RolesSection() {
     const roles: Role[] = [
         {
-            name: "Frontend Engineer",
+            name: "Frontend Engineer (Remote)",
             description: "Frontend Engineers specialize in building responsive, dynamic, and user-friendly interfaces using modern web technologies.",
-            skills: ["HTML5", "CSS3", "JavaScript", "React", "Vue.js", "Webpack", "User Experience Optimization"],
+            skills: ["HTML5", "CSS3", "JavaScript", "React", "User Experience Optimization"],
             responsibilities: [
                 "Develop and maintain responsive web applications",
                 "Ensure cross-browser and cross-platform compatibility",
@@ -21,32 +21,32 @@ export default function RolesSection() {
                 "Optimize application performance for speed and scalability",
             ],
         },
+        // {
+        //     name: "Backend Engineer",
+        //     description: "Backend Engineers are responsible for server-side logic and APIs, ensuring efficient data flow and system security.",
+        //     skills: ["Node.js", "Python", "Java", "SQL/NoSQL Databases", "RESTful APIs", "AWS", "Microservices Architecture"],
+        //     responsibilities: [
+        //         "Design and maintain backend infrastructure",
+        //         "Develop RESTful APIs for web and mobile apps",
+        //         "Ensure high performance, scalability, and security of applications",
+        //         "Collaborate with frontend developers to integrate solutions",
+        //     ],
+        // },
+        // {
+        //     name: "Full-Stack Developer",
+        //     description: "Full-Stack Developers work on both frontend and backend technologies to deliver complete web and mobile applications.",
+        //     skills: ["JavaScript", "HTML/CSS", "Node.js", "React", "MongoDB", "SQL", "Cloud Platforms"],
+        //     responsibilities: [
+        //         "Develop full-stack web applications",
+        //         "Implement seamless integration between frontend and backend",
+        //         "Maintain and improve existing applications",
+        //         "Collaborate across teams to ensure product delivery",
+        //     ]
+        // },
         {
-            name: "Backend Engineer",
-            description: "Backend Engineers are responsible for server-side logic and APIs, ensuring efficient data flow and system security.",
-            skills: ["Node.js", "Python", "Java", "SQL/NoSQL Databases", "RESTful APIs", "AWS", "Microservices Architecture"],
-            responsibilities: [
-                "Design and maintain backend infrastructure",
-                "Develop RESTful APIs for web and mobile apps",
-                "Ensure high performance, scalability, and security of applications",
-                "Collaborate with frontend developers to integrate solutions",
-            ],
-        },
-        {
-            name: "Full-Stack Developer",
-            description: "Full-Stack Developers work on both frontend and backend technologies to deliver complete web and mobile applications.",
-            skills: ["JavaScript", "HTML/CSS", "Node.js", "React", "MongoDB", "SQL", "Cloud Platforms"],
-            responsibilities: [
-                "Develop full-stack web applications",
-                "Implement seamless integration between frontend and backend",
-                "Maintain and improve existing applications",
-                "Collaborate across teams to ensure product delivery",
-            ]
-        },
-        {
-            name: "UI/UX Designer",
+            name: "UI/UX Designer (Intern)",
             description: "UI/UX Designers focus on crafting intuitive, visually appealing interfaces that offer an excellent user experience.",
-            skills: ["Adobe XD", "Figma", "Sketch", "Prototyping", "User Research", "Usability Testing"],
+            skills: ["Figma", "Prototyping", "User Research", "Usability Testing"],
             responsibilities: [
                 "Design user-friendly interfaces for web and mobile platforms",
                 "Conduct user research to gather insights and refine designs",
@@ -54,28 +54,28 @@ export default function RolesSection() {
                 "Collaborate with developers to implement and optimize designs",
             ]
         },
-        {
-            name: "DevOps Engineer",
-            description: "DevOps Engineers ensure the smooth and efficient deployment of applications, managing infrastructure and automation processes.",
-            skills: ["CI/CD Pipelines", "Docker", "Kubernetes", "AWS", "Google Cloud", "Automation", "Monitoring Tools"],
-            responsibilities: [
-                "Build and manage continuous integration and deployment pipelines",
-                "Ensure application scalability, reliability, and security",
-                "Automate development processes and manage infrastructure",
-                "Collaborate with development teams for streamlined releases",
-            ]
-        },
-        {
-            name: "Data Engineer",
-            description: "Data Engineers build and maintain scalable data pipelines and infrastructure, helping businesses transform data into actionable insights.",
-            skills: ["SQL", "Python", "Apache Hadoop", "Spark", "ETL Tools", "Data Warehousing", "Cloud Platforms"],
-            responsibilities: [
-                "Design and manage data pipelines",
-                "Collaborate with data scientists to optimize data workflows",
-                "Ensure data integrity and security across platforms",
-                "Develop and maintain data storage solutions",
-            ]
-        }
+        // {
+        //     name: "DevOps Engineer",
+        //     description: "DevOps Engineers ensure the smooth and efficient deployment of applications, managing infrastructure and automation processes.",
+        //     skills: ["CI/CD Pipelines", "Docker", "Kubernetes", "AWS", "Google Cloud", "Automation", "Monitoring Tools"],
+        //     responsibilities: [
+        //         "Build and manage continuous integration and deployment pipelines",
+        //         "Ensure application scalability, reliability, and security",
+        //         "Automate development processes and manage infrastructure",
+        //         "Collaborate with development teams for streamlined releases",
+        //     ]
+        // },
+        // {
+        //     name: "Data Engineer",
+        //     description: "Data Engineers build and maintain scalable data pipelines and infrastructure, helping businesses transform data into actionable insights.",
+        //     skills: ["SQL", "Python", "Apache Hadoop", "Spark", "ETL Tools", "Data Warehousing", "Cloud Platforms"],
+        //     responsibilities: [
+        //         "Design and manage data pipelines",
+        //         "Collaborate with data scientists to optimize data workflows",
+        //         "Ensure data integrity and security across platforms",
+        //         "Develop and maintain data storage solutions",
+        //     ]
+        // }
     ];
 
     return (
