@@ -45,7 +45,7 @@ export default function RolesSection() {
         // },
         {
             name: "UI/UX Designer (Intern)",
-            description: "Assist in designing and refining user interfaces and experiences for web applications, collaborating with the team to create intuitive and engaging designs.\n" +,
+            description: "Assist in designing and refining user interfaces and experiences for web applications, collaborating with the team to create intuitive and engaging designs.",
             skills: ["Figma", "Prototyping", "User Research", "Usability Testing"],
             responsibilities: [
                 "Design user-friendly interfaces for web and mobile platforms",
