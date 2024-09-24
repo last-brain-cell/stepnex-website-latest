@@ -24,7 +24,7 @@ const testimonials = [
     },
     {
       content:
-        'StepNex delivered a robust ERP system that integrated every aspect of our business. It has simplified operations and given us full control over our resources.',
+        'StepNex delivered a robustt ERP system that integrated every aspect of our business. It has simplified operations and given us full control over our resources.',
       author: {
         name: 'Madhu Goel',
         role: 'Partner at Shivoha Infrastructure LLP',
