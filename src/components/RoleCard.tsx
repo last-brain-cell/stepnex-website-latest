@@ -1,8 +1,8 @@
 'use client'
 
 import ReactCardFlip from "react-card-flip";
-import { Role } from "@/components/RolesSection";
-import { useState } from "react";
+import {Role} from "@/components/RolesSection";
+import {useState} from "react";
 
 export default function RoleCard({ role }: { role: Role }) {
     const [isFlipped, setIsFlipped] = useState(false);
