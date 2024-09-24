@@ -29,8 +29,6 @@ jobs:
 
       - name: Trigger Vercel Deployment via API
         run: |
-          curl -X POST "https://api.vercel.com/v13/deployments" \
-            -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}" -H "Content-Type: application/json" \
-            -d '{
-            "name": "stepnex-website-latest"
-          }'
+          curl -X POST "https://api.vercel.com/v1/integrations/deploy/prj_FqpdCYSvg1Y82i5hLjF5bcu5Kf5W/Rta7AKpRyO" \
+            -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}" \
+            -d '{"name": "Your Project Name", "gitSource": {"ref": "main"}}'
