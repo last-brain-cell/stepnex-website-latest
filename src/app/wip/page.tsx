@@ -1,8 +1,8 @@
-import Link from 'next/link'
+import Link from "next/link";
 
-import {Button} from '@/components/Button'
-import {Logo} from '@/components/Logo'
-import {SlimLayout} from '@/components/SlimLayout'
+import { Button } from "@/components/Button";
+import { Logo } from "@/components/Logo";
+import { SlimLayout } from "@/components/SlimLayout";
 
 export default function Page() {
   return (
@@ -15,12 +15,10 @@ export default function Page() {
       <h1 className="mt-3 text-lg font-semibold text-gray-900">
         Page is Work in-progress
       </h1>
-      <p className="mt-3 text-sm text-gray-700">
-        Sit tight!
-      </p>
+      <p className="mt-3 text-sm text-gray-700">Sit tight!</p>
       <Button href="/" className="mt-10">
         Go back home
       </Button>
     </SlimLayout>
-  )
+  );
 }

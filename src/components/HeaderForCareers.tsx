@@ -1,9 +1,9 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
+import Link from "next/link";
 
-import {Container} from '@/components/Container'
-import {Logo} from '@/components/Logo'
+import { Container } from "@/components/Container";
+import { Logo } from "@/components/Logo";
 //
 // function MobileNavLink({
 //                            href,
@@ -74,30 +74,37 @@ import {Logo} from '@/components/Logo'
 // }
 
 export function HeaderForCareers() {
-    return (
-        <header className="py-10">
-            <Container>
-                <nav className="relative z-50 flex">
-                    <div className="flex items-center w-full">
-                        <Link href="/" aria-label="Home" className={'flex flex-row font-bold items-center gap-4 text-xl'}>
-                            <Logo className="h-10 w-auto" />
-                        </Link>
-                        {/*<div className="hidden md:flex md:gap-x-6">*/}
-                        {/*    <NavLink href="#features">Services</NavLink>*/}
-                        {/*    <NavLink href="#testimonials">Testimonials</NavLink>*/}
-                        {/*    <NavLink href="#pricing">Careers</NavLink>*/}
-                        {/*</div>*/}
-                        <div className={'flex w-full justify-end'}>
-                          <Link href={"https://forms.gle/3Lpxp26VP7VPQKVA7"}>
-                            <button className={'bg-black px-6 font-normal py-2 rounded-full text-white hover:bg-zinc-800'}>
-                              Apply now
-                            </button>
-                          </Link>
-                        </div>
-
-                    </div>
-                </nav>
-            </Container>
-        </header>
-    )
+  return (
+    <header className="py-10">
+      <Container>
+        <nav className="relative z-50 flex">
+          <div className="flex items-center w-full">
+            <Link
+              href="/"
+              aria-label="Home"
+              className={"flex flex-row font-bold items-center gap-4 text-xl"}
+            >
+              <Logo className="h-10 w-auto" />
+            </Link>
+            {/*<div className="hidden md:flex md:gap-x-6">*/}
+            {/*    <NavLink href="#features">Services</NavLink>*/}
+            {/*    <NavLink href="#testimonials">Testimonials</NavLink>*/}
+            {/*    <NavLink href="#pricing">Careers</NavLink>*/}
+            {/*</div>*/}
+            <div className={"flex w-full justify-end"}>
+              <Link href={"https://forms.gle/3Lpxp26VP7VPQKVA7"}>
+                <button
+                  className={
+                    "bg-black px-6 font-normal py-2 rounded-full text-white hover:bg-zinc-800"
+                  }
+                >
+                  Apply now
+                </button>
+              </Link>
+            </div>
+          </div>
+        </nav>
+      </Container>
+    </header>
+  );
 }

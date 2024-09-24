@@ -1,33 +1,33 @@
-'use client'
+"use client";
 
-import {useId} from 'react'
-import {type ImageProps} from 'next/image'
-import {Tab, TabGroup, TabList} from '@headlessui/react'
-import clsx from 'clsx'
+import { useId } from "react";
+import { type ImageProps } from "next/image";
+import { Tab, TabGroup, TabList } from "@headlessui/react";
+import clsx from "clsx";
 
-import {Container} from '@/components/Container'
-import screenshotContacts from '@/images/screenshots/contacts.png'
-import screenshotInventory from '@/images/screenshots/inventory.png'
-import screenshotProfitLoss from '@/images/screenshots/profit-loss.png'
-import {CloudIcon} from "@heroicons/react/24/outline";
+import { Container } from "@/components/Container";
+import screenshotContacts from "@/images/screenshots/contacts.png";
+import screenshotInventory from "@/images/screenshots/inventory.png";
+import screenshotProfitLoss from "@/images/screenshots/profit-loss.png";
+import { CloudIcon } from "@heroicons/react/24/outline";
 
 interface Feature {
-  name: React.ReactNode
-  summary: string
-  description: string
-  image: ImageProps['src']
-  icon: React.ComponentType
+  name: React.ReactNode;
+  summary: string;
+  description: string;
+  image: ImageProps["src"];
+  icon: React.ComponentType;
 }
 
 const features: Array<Feature> = [
   {
-    name: 'Innovative User Experiences',
-    summary: 'Crafting engaging, intuitive designs that captivate users',
+    name: "Innovative User Experiences",
+    summary: "Crafting engaging, intuitive designs that captivate users",
     description:
-      'We create intuitive, responsive, and visually engaging interfaces that deliver seamless user experiences across all devices, ensuring that your digital products stand out in the market.',
+      "We create intuitive, responsive, and visually engaging interfaces that deliver seamless user experiences across all devices, ensuring that your digital products stand out in the market.",
     image: screenshotProfitLoss,
     icon: function ReportingIcon() {
-      const id = useId()
+      const id = useId();
       return (
         <>
           <defs>
@@ -51,15 +51,14 @@ const features: Array<Feature> = [
             strokeLinejoin="round"
           />
         </>
-      )
+      );
     },
   },
   {
-    name: 'Scalable & Secure Backend Solutions',
-    summary:
-      'Building robust systems to support growth and security.',
+    name: "Scalable & Secure Backend Solutions",
+    summary: "Building robust systems to support growth and security.",
     description:
-      'Our backend solutions are engineered for performance, scalability, and security. Whether you\'re handling large volumes of data or complex processes, we ensure your systems are resilient, reliable, and secure to meet your business demands.',
+      "Our backend solutions are engineered for performance, scalability, and security. Whether you're handling large volumes of data or complex processes, we ensure your systems are resilient, reliable, and secure to meet your business demands.",
     image: screenshotInventory,
     icon: function InventoryIcon() {
       return (
@@ -79,15 +78,15 @@ const features: Array<Feature> = [
             fill="#fff"
           />
         </>
-      )
+      );
     },
   },
   {
-    name: 'Future-Ready Cloud Infrastructure',
+    name: "Future-Ready Cloud Infrastructure",
     summary:
-      'Optimizing scalability and performance with seamless cloud integration.',
+      "Optimizing scalability and performance with seamless cloud integration.",
     description:
-      'We leverage cutting-edge cloud technologies to ensure your business operates efficiently and can scale seamlessly. Our solutions focus on reliability, security, and flexibility to support your growth.',
+      "We leverage cutting-edge cloud technologies to ensure your business operates efficiently and can scale seamlessly. Our solutions focus on reliability, security, and flexibility to support your growth.",
     image: screenshotContacts,
     icon: function ContactsIcon() {
       return (
@@ -95,39 +94,43 @@ const features: Array<Feature> = [
           {/*<Cloud className={"stroke-white"} height={24}/>*/}
           <CloudIcon height={32} className={"stroke-white stroke-2"} />
         </>
-      )
+      );
     },
   },
-]
+];
 
 function Feature({
   feature,
   isActive,
   className,
   ...props
-}: React.ComponentPropsWithoutRef<'div'> & {
-  feature: Feature
-  isActive: boolean
+}: React.ComponentPropsWithoutRef<"div"> & {
+  feature: Feature;
+  isActive: boolean;
 }) {
   return (
     <div
-      className={clsx(className, !isActive && 'opacity-75 hover:opacity-100')}
+      className={clsx(className, !isActive && "opacity-75 hover:opacity-100")}
       {...props}
     >
       <div
         className={clsx(
-          'w-9 rounded-lg',
-          isActive ? 'bg-blue-600' : 'bg-slate-500',
+          "w-9 rounded-lg",
+          isActive ? "bg-blue-600" : "bg-slate-500",
         )}
       >
-        <svg aria-hidden="true" className="h-9 w-9 items-center justify-center" fill="none">
+        <svg
+          aria-hidden="true"
+          className="h-9 w-9 items-center justify-center"
+          fill="none"
+        >
           <feature.icon />
         </svg>
       </div>
       <h3
         className={clsx(
-          'mt-6 text-sm font-medium',
-          isActive ? 'text-blue-600' : 'text-slate-600',
+          "mt-6 text-sm font-medium",
+          isActive ? "text-blue-600" : "text-slate-600",
         )}
       >
         {feature.name}
@@ -137,7 +140,7 @@ function Feature({
       </p>
       <p className="mt-4 text-sm text-slate-600">{feature.description}</p>
     </div>
-  )
+  );
 }
 
 function FeaturesMobile() {
@@ -160,7 +163,7 @@ function FeaturesMobile() {
         </div>
       ))}
     </div>
-  )
+  );
 }
 
 function FeaturesDesktop() {
@@ -215,7 +218,7 @@ function FeaturesDesktop() {
         </>
       )}
     </TabGroup>
-  )
+  );
 }
 
 export function SecondaryFeatures() {
@@ -231,7 +234,10 @@ export function SecondaryFeatures() {
             Our Expertise.
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-            We specialize in delivering cutting-edge solutions across a range of industries, leveraging the latest technologies to drive innovation and business growth. <br/><br/>
+            We specialize in delivering cutting-edge solutions across a range of
+            industries, leveraging the latest technologies to drive innovation
+            and business growth. <br />
+            <br />
             Our core competencies are divided into three key areas:
           </p>
         </div>
@@ -239,5 +245,5 @@ export function SecondaryFeatures() {
         <FeaturesDesktop />
       </Container>
     </section>
-  )
+  );
 }
