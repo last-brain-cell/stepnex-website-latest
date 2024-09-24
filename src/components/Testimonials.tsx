@@ -31,15 +31,15 @@ const testimonials = [
         image: avatarImage5,
       },
     },
-    {
-      content:
-        'The project management system built by StepNex has revolutionized how we handle operations, projects, and clients. Our teams are more coordinated, and projects move faster.',
-      author: {
-        name: 'Bishwajit Singh',
-        role: 'CEO at Udyam Ventures Pvt. Ltd.',
-        image: avatarImage5,
-      },
-    },
+    // {
+    //   content:
+    //     'The project management system built by StepNex has revolutionized how we handle operations, projects, and clients. Our teams are more coordinated, and projects move faster.',
+    //   author: {
+    //     name: 'Bishwajit Singh',
+    //     role: 'CEO at Udyam Ventures Pvt. Ltd.',
+    //     image: avatarImage5,
+    //   },
+    // },
 ]
 
 function QuoteIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
