@@ -12,7 +12,7 @@ export default function RolesSection() {
     const roles: Role[] = [
         {
             name: "Frontend Engineer (Remote)",
-            description: "Frontend Engineers specialize in building responsive, dynamic, and user-friendly interfaces using modern web technologies.",
+            description: "Develop and maintain dynamic web applications using React.js while collaborating with cross-functional teams to enhance user experience and optimize performance.",
             skills: ["HTML5", "CSS3", "JavaScript", "React", "User Experience Optimization"],
             responsibilities: [
                 "Develop and maintain responsive web applications",
@@ -45,7 +45,7 @@ export default function RolesSection() {
         // },
         {
             name: "UI/UX Designer (Intern)",
-            description: "UI/UX Designers focus on crafting intuitive, visually appealing interfaces that offer an excellent user experience.",
+            description: "Assist in designing and refining user interfaces and experiences for web applications, collaborating with the team to create intuitive and engaging designs.",
             skills: ["Figma", "Prototyping", "User Research", "Usability Testing"],
             responsibilities: [
                 "Design user-friendly interfaces for web and mobile platforms",
@@ -53,6 +53,17 @@ export default function RolesSection() {
                 "Create prototypes and wireframes to validate designs",
                 "Collaborate with developers to implement and optimize designs",
             ]
+        },
+                {
+            name: "React Developer (Intern)",
+            description: "Support the development and maintenance of web applications using React.js, collaborating with the team to enhance user experience and troubleshoot issues.",
+            skills: ["HTML5", "CSS3", "JavaScript", "React", "User Experience Optimization"],
+            responsibilities: [
+                "Develop and maintain responsive web applications",
+                "Ensure cross-browser and cross-platform compatibility",
+                "Collaborate with UI/UX designers to implement designs",
+                "Optimize application performance for speed and scalability",
+            ],
         },
         // {
         //     name: "DevOps Engineer",
