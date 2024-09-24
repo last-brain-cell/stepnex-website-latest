@@ -17,7 +17,11 @@ jobs:
           git config --global user.name 'last-brain-cell'
           git config --global user.email 'naadkd@gmail.com'
 
-      - name: Sync with upstream
+      - name: Add upstream remote
+        run: |
+          git remote add upstream https://github.com/StepnexTechnologies/Company-Website.git || echo "Upstream remote already exists"
+
+      - name: Sync with upstream main branch
         run: |
           git fetch upstream
           git checkout main
