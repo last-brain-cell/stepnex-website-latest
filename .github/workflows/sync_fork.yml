@@ -1,0 +1,31 @@
+name: Sync with upstream
+on:
+  repository_dispatch:
+    types: [sync_upstream]
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Set git config
+        run: |
+          git config --global user.name 'last-brain-cell'
+          git config --global user.email 'naadkd@gmail.com'
+
+      - name: Sync with upstream
+        run: |
+          git remote add upstream https://github.com/StepnexTechnologies/Company-Website.git || true
+          git fetch upstream
+          
+          git checkout feature/x
+          git merge --no-edit upstream/feature/x || echo "Merge conflict in feature/x. Skipping."
+          git push origin feature/x || echo "Failed to push feature/x."
+
+          git checkout main
+          git merge --no-edit upstream/main || echo "Merge conflict in main. Skipping."
+          git push origin main || echo "Failed to push main."
