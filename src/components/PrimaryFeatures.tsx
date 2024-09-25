@@ -11,7 +11,7 @@ import SLCM from "@/images/screenshots/SLCM.png";
 import Logistics from "@/images/screenshots/Logistics.png";
 // Import your background image
 import BackgroundImage from "@/images/background-call-to-action.jpg";
-import Tabs, {TabItem} from "@/components/Tabs"; // Update the path accordingly
+import {TabItem} from "@/components/Tabs"; // Update the path accordingly
 
 
 const items: TabItem[] = [
@@ -49,7 +49,7 @@ const items: TabItem[] = [
 
 export default function PrimaryFeatures() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [current, setCurrent] = useState<string>(items[0].title)
+  // const [current, setCurrent] = useState<string>(items[0].title)
 
   const moveUp = () => {
     setCurrentIndex((prevIndex) =>
