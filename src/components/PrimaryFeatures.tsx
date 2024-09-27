@@ -74,7 +74,7 @@ export default function PrimaryFeatures() {
 
   return (
     <div
-      className=" flex-row flex items-center justify-center min-h-screen py-12 px-8"
+      className=" flex-row items-center justify-center min-h-screen py-12 px-8 md:flex hidden"
       style={{
         backgroundImage: `url(${BackgroundImage.src})`,
         backgroundSize: "cover",
