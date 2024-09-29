@@ -75,6 +75,16 @@ export function Hero() {
               src: "/shivoha_logo.png",
               site: null,
             },
+              {
+                  name: "SK Infra",
+                  src: "/SK_INFRA.png",
+                  site: null,
+              },
+              {
+                  name: "Nexus Sphere",
+                  src: "/nexus_sphere_logo.png",
+                  site: null,
+              },
           ].map((company) => {
             return company.site ? (
               <Link
