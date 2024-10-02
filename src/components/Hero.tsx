@@ -3,6 +3,44 @@ import { Container } from "@/components/Container";
 import Link from "next/link";
 import Image from "next/image";
 
+const companies = [
+    {
+        name: "Udyam Ventures",
+        src: "/udyam_ventures_logo.png",
+        site: "https://udyamventures.com/",
+    },
+    {
+        name: "Aqua Products",
+        src: "/aqua_products_logo.png",
+        site: "https://www.aquaproducts.in/",
+    },
+    {
+        name: "NDCon",
+        src: "/ndcon_logo.png",
+        site: "https://www.ndconrmc.com/",
+    },
+    {
+        name: "Shivoha",
+        src: "/shivoha_logo.png",
+        site: null,
+    },
+    {
+        name: "SK Infra",
+        src: "/SK_INFRA.png",
+        site: null,
+    },
+    {
+        name: "Nexus Sphere",
+        src: "/nexus_sphere_logo.png",
+        site: null,
+    },
+    {
+        name: "Shree Infra",
+        src: "/Shree_Infra.avif",
+        site: null
+    }
+]
+
 export function Hero() {
   return (
     <Container className="pb-16 pt-20 text-center lg:pt-16">
@@ -54,43 +92,7 @@ export function Hero() {
             "grid lg:flex lg:flex-row gap-16  mt-12 md:grid-cols-2 sm:grid-cols-1 mx-auto justify-center"
           }
         >
-          {[
-            {
-              name: "Udyam Ventures",
-              src: "/udyam_ventures_logo.png",
-              site: "https://udyamventures.com/",
-            },
-            {
-              name: "Aqua Products",
-              src: "/aqua_products_logo.png",
-              site: "https://www.aquaproducts.in/",
-            },
-            {
-              name: "NDCon",
-              src: "/ndcon_logo.png",
-              site: "https://www.ndconrmc.com/",
-            },
-            {
-              name: "Shivoha",
-              src: "/shivoha_logo.png",
-              site: null,
-            },
-              {
-                  name: "SK Infra",
-                  src: "/SK_INFRA.png",
-                  site: null,
-              },
-              {
-                  name: "Nexus Sphere",
-                  src: "/nexus_sphere_logo.png",
-                  site: null,
-              },
-              {
-                  name: "Shree Infra",
-                  src: "/Shree_Infra.avif",
-                  site: null
-              }
-          ].map((company) => {
+          {companies.map((company) => {
             return company.site ? (
               <Link
                 key={company.name}
