@@ -11,7 +11,7 @@ import SLCM from "@/images/screenshots/SLCM.png";
 import Logistics from "@/images/screenshots/Logistics.png";
 // Import your background image
 import BackgroundImage from "@/images/background-call-to-action.jpg";
-import {TabItem} from "@/components/Tabs"; // Update the path accordingly
+import Tabs, {TabItem} from "@/components/Tabs"; // Update the path accordingly
 
 
 const items: TabItem[] = [
@@ -37,7 +37,7 @@ const items: TabItem[] = [
     title: "High Performance AI Solutions",
     content:
       "Advanced AI solutions built to handle complex tasks with speed and precision, empowering your business to achieve more.",
-    image: Logistics,
+    image: SLCM,
   },
   {
     title: "Data Analytics Platform",
@@ -49,6 +49,7 @@ const items: TabItem[] = [
 
 export default function PrimaryFeatures() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [current, setCurrent] = useState(items[0])
   // const [current, setCurrent] = useState<string>(items[0].title)
 
   const moveUp = () => {
@@ -73,91 +74,103 @@ export default function PrimaryFeatures() {
 
 
   return (
-    <div
-      className=" flex-row items-center justify-center min-h-screen py-12 px-8 md:flex hidden"
-      style={{
-        backgroundImage: `url(${BackgroundImage.src})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-        <div className="relative w-1/3">
-          <Button
-              className="absolute left-1/2 top-0 bg-blue-400 outline-1 outline-white hover:bg-opacity-60 hover:bg-blue-300 bg-opacity-50 -translate-x-1/2  -translate-y-full mb-2 z-10"
-              onClick={moveUp}
-          >
-            <ChevronUp className="h-4 stroke-white stroke-2 w-4"/>
-          </Button>
-          <div className="relative h-[480px] overflow-hidden">
-            <AnimatePresence initial={false}>
-              {visibleItems.map((item, index) => (
-                  <motion.div
-                      key={item.title}
-                      className="absolute w-full"
-                      initial={{
-                        opacity: 0,
-                        y:
-                            index === 1
-                                ? 0
-                                : index === 0
-                                    ? -160
-                                    : index === 2
-                                        ? 160
-                                        : 320,
-                      }}
-                      animate={{
-                        opacity: 1,
-                        y: (index - 1) * 160,
-                      }}
-                      exit={{
-                        opacity: 0,
-                        y:
-                            index === 1
-                                ? 0
-                                : index === 0
-                                    ? -160
-                                    : index === 2
-                                        ? 160
-                                        : 320,
-                      }}
-                      transition={{duration: 0.3}}
-                  >
-                    <Card
-                        className={`w-full border-0 rounded-l-lg rounded-r-none h-[150px] flex flex-col justify-center mb-2 cursor-pointer transition-shadow hover:bg-blue-500 hover:shadow-lg overflow-hidden text-white ${index == 2 ? "bg-blue-400 outline-1 outline-white bg-opacity-50" : "bg-blue-800 bg-opacity-0 shadow-none"}`}
-                        onClick={() =>
-                            setCurrentIndex(
-                                (currentIndex + index - 1 + items.length - 1) % items.length,
-                            )
-                        }
+      <div>
+        <div
+            className=" flex-row items-center justify-center mt-16 min-h-screen py-12 px-8 md:flex hidden"
+            style={{
+              backgroundImage: `url(${BackgroundImage.src})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+        >
+          <div className="relative w-1/3">
+            <Button
+                className="absolute left-1/2 top-0 bg-blue-400 outline-1 outline-white hover:bg-opacity-60 hover:bg-blue-300 bg-opacity-50 -translate-x-1/2  -translate-y-full mb-2 z-10"
+                onClick={moveUp}
+            >
+              <ChevronUp className="h-4 stroke-white stroke-2 w-4"/>
+            </Button>
+            <div className="relative h-[480px] overflow-hidden">
+              <AnimatePresence initial={false}>
+                {visibleItems.map((item, index) => (
+                    <motion.div
+                        key={item.title}
+                        className="absolute w-full"
+                        initial={{
+                          opacity: 0,
+                          y:
+                              index === 1
+                                  ? 0
+                                  : index === 0
+                                      ? -160
+                                      : index === 2
+                                          ? 160
+                                          : 320,
+                        }}
+                        animate={{
+                          opacity: 1,
+                          y: (index - 1) * 160,
+                        }}
+                        exit={{
+                          opacity: 0,
+                          y:
+                              index === 1
+                                  ? 0
+                                  : index === 0
+                                      ? -160
+                                      : index === 2
+                                          ? 160
+                                          : 320,
+                        }}
+                        transition={{duration: 0.3}}
                     >
-                      <CardHeader className="p-4">
-                        <CardTitle className="text-lg">{item.title}</CardTitle>
-                      </CardHeader>
-                      <CardContent className="p-4 pt-0">
-                        <p className="text-sm text-muted-foreground text-white line-clamp-2">
-                          {item.content}
-                        </p>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
-              ))}
-            </AnimatePresence>
+                      <Card
+                          className={`w-full border-0  rounded-l-lg rounded-r-none h-[150px] flex flex-col justify-center mb-2 cursor-pointer transition-shadow hover:bg-blue-500 hover:shadow-lg  text-white ${index == 2 ? "bg-blue-400 outline-1 outline-white bg-opacity-50" : "bg-blue-800 bg-opacity-0 shadow-none"}`}
+                          onClick={() =>
+                              setCurrentIndex(
+                                  (currentIndex + index - 1 + items.length - 1) % items.length,
+                              )
+                          }
+                      >
+                        <CardHeader className="p-4">
+                          <CardTitle className="text-lg">{item.title}</CardTitle>
+                        </CardHeader>
+                        <CardContent className="p-4 pt-0">
+                          <p className="text-sm text-muted-foreground text-white line-clamp-2">
+                            {item.content}
+                          </p>
+                        </CardContent>
+                      </Card>
+                    </motion.div>
+                ))}
+              </AnimatePresence>
+            </div>
+            <Button
+                className="absolute bg-blue-400 outline-1 outline-white hover:bg-opacity-60 hover:bg-blue-300 bg-opacity-50 left-1/2 bottom-0 -translate-x-1/2 translate-y-full mt-2 z-10"
+                onClick={moveDown}
+            >
+              <ChevronDown className="h-4 stroke-white stroke-2 w-4"/>
+            </Button>
           </div>
-          <Button
-              className="absolute bg-blue-400 outline-1 outline-white hover:bg-opacity-60 hover:bg-blue-300 bg-opacity-50 left-1/2 bottom-0 -translate-x-1/2 translate-y-full mt-2 z-10"
-              onClick={moveDown}
-          >
-            <ChevronDown className="h-4 stroke-white stroke-2 w-4"/>
-          </Button>
+          <div className={"w-2/3"}>
+            <Image
+                src={items[currentIndex].image}
+                alt={items[currentIndex].title}
+                className={"w-auto h-400 object-contain rounded-lg"}
+            />
+          </div>
         </div>
-        <div className={"w-2/3"}>
-          <Image
-              src={items[currentIndex].image}
-              alt={items[currentIndex].title}
-              className={"w-auto h-400 object-contain rounded-lg"}
-          />
+        <div className={'flex flex-col md:hidden gap-8 max-w-full px-4'}>
+          <div className={'text-center text-3xl mb-4  font-sans mt-4'}>Our Services</div>
+          <Tabs items={items} current={current} setCurrent={setCurrent}/>
+          <div className="relative overflow-hidden">
+            <Image
+                src={current.image}
+                alt={current.title}
+                className="h-full object-contain object-left-top rounded-lg transform scale-150 origin-top-left"
+            />
+          </div>
         </div>
-      {/*<Tabs items={items} current={current} setCurrent={setCurrent}/>*/}
-    </div>
+      </div>
   );
 }
