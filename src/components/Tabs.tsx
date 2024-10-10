@@ -37,7 +37,7 @@ export default function Tabs({items, current, setCurrent}: {items: TabItem[], cu
     return (
         <div>
             <div className="">
-                <nav aria-label="Tabs" className="flex space-x-4 overflow-x-auto no-scrollbar justify-between px-4 items-center">
+                <nav aria-label="Tabs" className="flex space-x-4 overflow-x-auto no-scrollbar justify-between items-center">
                     <button onClick={prev}>
                         <ChevronLeftIcon className={'h-8 stroke-gray-500'}/>
                     </button>
@@ -47,7 +47,7 @@ export default function Tabs({items, current, setCurrent}: {items: TabItem[], cu
                             aria-current={current === current  ? 'page' : undefined}
                             className={classNames(
                                 current === current ? '  text-stepnex-blue' : 'text-gray-500 hover:text-gray-700',
-                                'rounded-md px-3 py-2 text-md font-medium  text-nowrap',
+                                'rounded-md px-3 py-2 text-md font-medium  text-center text-nowrap',
                             )}
                         >
                             {current.title}
