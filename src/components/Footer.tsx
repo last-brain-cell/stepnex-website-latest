@@ -13,6 +13,9 @@ export function Footer() {
               <NavLink href="#features">
                 <b>Services</b>
               </NavLink>
+              <NavLink href="#about">
+                <b>About</b>
+              </NavLink>
               <NavLink href="#secondary-features">
                 <b>Expertise</b>
               </NavLink>
